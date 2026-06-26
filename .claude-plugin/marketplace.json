@@ -1,0 +1,21 @@
+{
+  "name": "xandy-skills",
+  "owner": {
+    "name": "Alexandre Carvalho Simas"
+  },
+  "metadata": {
+    "description": "Skills pessoais para Claude Code — roteamento de pesquisa web custo-consciente e outros fluxos.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "web-research",
+      "description": "Politica de roteamento de pesquisa web: MCPs Z.ai (gratis no GLM Coding Pro) -> WebFetch -> Perplexity (deep research) -> fallback manual via PERPLEXITY.md",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/web-research"
+      ]
+    }
+  ]
+}
