@@ -4,8 +4,8 @@
     "name": "Alexandre Carvalho Simas"
   },
   "metadata": {
-    "description": "Skills pessoais para Claude Code — roteamento de pesquisa web custo-consciente e outros fluxos.",
-    "version": "0.1.0"
+    "description": "Skills pessoais para Claude Code — roteamento de pesquisa web custo-consciente, handoff entre sessões e outros fluxos.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
@@ -15,6 +15,24 @@
       "strict": false,
       "skills": [
         "./skills/web-research"
+      ]
+    },
+    {
+      "name": "session-id",
+      "description": "Devolve o id da sessão atual (sess_...) do ZCode, para referenciar em outra conversa com #sess_... ou usar com /session-pull",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/session-id"
+      ]
+    },
+    {
+      "name": "session-pull",
+      "description": "Puxa o contexto de outra sessão do ZCode para a atual (ReadSessionContext, strategy handoff). Argumento: o id da sessão de origem (sess_...)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/session-pull"
       ]
     }
   ]
